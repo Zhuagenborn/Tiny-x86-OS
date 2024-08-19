@@ -42,17 +42,19 @@ CXXFLAGS := -m32 \
 	-fno-threadsafe-statics \
 	-fno-stack-protector \
 	-Wno-missing-field-initializers
+
 LDFLAGS := -m elf_i386 \
 	-Ttext $(CODE_ENTRY) \
 	-e main
 
 .PHONY: build
-build: boot
+build: boot kernel
 
 .PHONY: install
 install:
 	dd if=$(BUILD_DIR)/boot/mbr.bin of=$(DISK) bs=512 count=1 conv=notrunc
 	dd if=$(BUILD_DIR)/boot/loader.bin of=$(DISK) seek=1 bs=512 count=$(LOADER_SECTOR_COUNT) conv=notrunc
+	dd if=$(BUILD_DIR)/kernel.bin of=$(DISK) bs=512 seek=$(KRNL_START_SECTOR) count=$(KRNL_SECTOR_COUNT) conv=notrunc
 
 .PHONY: clean
 clean:
@@ -82,3 +84,51 @@ $(BOOT_OBJS): $(BUILD_DIR)/%.bin: %.asm $(BOOT_HEADERS)
 
 .PHONY: boot
 boot: $(BOOT_OBJS)
+
+############################### Generate C++ dependency files ###############################
+
+CXX_SRC := $(shell find $(SRC_DIR) -name '*.cpp')
+CXX_INC_PREQS := $(addprefix $(BUILD_DIR),$(patsubst $(SRC_DIR)%.cpp,%.d,$(CXX_SRC)))
+
+$(CXX_INC_PREQS): $(BUILD_DIR)/%.d: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) -MM -I$(INC_DIR) -I$(dir $<) -I$(subst $(SRC_DIR),$(INC_DIR),$(dir $<)) $< > $@
+	sed -Ei 's#^(.*\.o: *)$(SRC_DIR:./%=%)/(.*/)?(.*\.cpp)#$(BUILD_DIR:./%=%)/\2\1$(SRC_DIR:./%=%)/\2\3#' $@
+
+include $(CXX_INC_PREQS)
+
+###################################### Build the user #######################################
+
+USR_CXX_SRC := $(shell find $(SRC_DIR)/user -name '*.cpp')
+USR_CXX_OBJS := $(addprefix $(BUILD_DIR),$(patsubst $(SRC_DIR)%.cpp,%.o,$(USR_CXX_SRC)))
+
+$(USR_CXX_OBJS): $(BUILD_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -I$(dir $<) -I$(subst $(SRC_DIR),$(INC_DIR),$(dir $<)) -o $@ $<
+
+.PHONY: user
+user: $(USR_CXX_OBJS)
+
+##################################### Build the kernel ######################################
+
+KRNL_AS_HEADERS := $(shell find $(INC_DIR)/kernel -name '*.inc') $(shell find $(SRC_DIR) -name '*.inc')
+KRNL_AS_SRC := $(filter-out $(BOOT_SRC),$(shell find $(SRC_DIR) -name '*.asm'))
+KRNL_AS_OBJS := $(addprefix $(BUILD_DIR),$(patsubst $(SRC_DIR)%.asm,%_nasm.o,$(KRNL_AS_SRC)))
+
+$(KRNL_AS_OBJS): $(BUILD_DIR)/%_nasm.o: %.asm $(KRNL_AS_HEADERS)
+	@mkdir -p $(dir $@)
+	$(AS) $(ASFLAGS) -i$(dir $<) -i$(subst $(SRC_DIR),$(INC_DIR),$(dir $<)) -o $@ $<
+
+KRNL_CXX_SRC := $(shell find $(SRC_DIR)/kernel -name '*.cpp')
+KRNL_CXX_OBJS := $(addprefix $(BUILD_DIR),$(patsubst $(SRC_DIR)%.cpp,%.o,$(KRNL_CXX_SRC)))
+
+$(KRNL_CXX_OBJS): $(BUILD_DIR)/%.o: %.cpp
+	@mkdir -p $(dir $@)
+	$(CXX) $(CXXFLAGS) -I$(dir $<) -I$(subst $(SRC_DIR),$(INC_DIR),$(dir $<)) -o $@ $<
+
+$(BUILD_DIR)/kernel.bin: $(KRNL_AS_OBJS) $(KRNL_CXX_OBJS) $(CRT_CXX_OBJS) $(UTIL_CXX_OBJS) $(USR_CXX_OBJS)
+# `main.o` must be the first object file, otherwise another function wil be placed at `0xC0001500`.
+	$(LD) $(LDFLAGS) $(BUILD_DIR)/kernel/main.o $(filter-out %/main.o,$^) -o $@
+
+.PHONY: kernel
+kernel: $(BUILD_DIR)/kernel.bin
