@@ -1,0 +1,30 @@
+name: Build the project with Make on Ubuntu
+on:
+  push:
+    branches: [main, master]
+    paths:
+      - '!docs/**'
+      - '.github/workflows/make.yaml'
+      - 'include/**'
+      - 'src/**'
+      - '**/Makefile'
+  pull_request:
+    branches: [main, master]
+    paths:
+      - '!docs/**'
+      - '.github/workflows/make.yaml'
+      - 'include/**'
+      - 'src/**'
+      - '**/Makefile'
+jobs:
+  make:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Download package information
+        run: sudo apt-get update
+      - name: Install NASM
+        run: sudo apt-get install -y nasm
+      - name: Check out the repository
+        uses: actions/checkout@main
+      - name: Build the project
+        run: make
