@@ -1,0 +1,46 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/128.0.0.0 Safari/537.36 Edg/128.0.0.0" version="24.7.13">
+  <diagram name="第 1 页" id="dqv25UgI1OhXflhYibhH">
+    <mxGraphModel dx="837" dy="506" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="MBMzgvPnqjGGaBJHlUTY-3" value="" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;locked=1;connectable=0;" vertex="1" connectable="0" parent="1">
+          <mxGeometry x="110" y="540" width="445" height="240" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-22" value="Thread&lt;div style=&quot;font-size: 10px;&quot;&gt;Switching&lt;/div&gt;" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=10;notch=10;direction=south;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;gradientColor=none;" parent="MBMzgvPnqjGGaBJHlUTY-3" vertex="1">
+          <mxGeometry x="190" y="38" width="65" height="165" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-27" value="Thread 2" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=10;notch=10;fillColor=#d5e8d4;strokeColor=#82b366;fontFamily=Verdana;fontSize=10;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="MBMzgvPnqjGGaBJHlUTY-3" vertex="1">
+          <mxGeometry x="255" y="210" width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-35" value="" style="group;fillColor=#dae8fc;strokeColor=none;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=10;" parent="MBMzgvPnqjGGaBJHlUTY-3" vertex="1" connectable="0">
+          <mxGeometry x="285" y="140" width="130" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-36" value="Thread 2&#39;s Stack" style="swimlane;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=10;" parent="NGF7unSMzricVWb-dtFi-35" vertex="1">
+          <mxGeometry width="130" height="63" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-31" value="Resotre" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="NGF7unSMzricVWb-dtFi-36" vertex="1">
+          <mxGeometry x="-53" y="22" width="73" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="MBMzgvPnqjGGaBJHlUTY-2" value="Registers" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=none;fillColor=#dae8fc;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontFamily=Verdana;fontSize=10;" vertex="1" parent="NGF7unSMzricVWb-dtFi-36">
+          <mxGeometry x="32.499523809523794" y="29.35571428571427" width="65" height="25.285714285714285" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-20" value="" style="group;fillColor=#dae8fc;strokeColor=none;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=10;" parent="MBMzgvPnqjGGaBJHlUTY-3" vertex="1" connectable="0">
+          <mxGeometry x="30" y="41" width="130" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-16" value="Thread 1&#39;s Stack" style="swimlane;fillColor=#dae8fc;strokeColor=#6c8ebf;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontSize=10;" parent="NGF7unSMzricVWb-dtFi-20" vertex="1">
+          <mxGeometry width="130" height="59" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-17" value="Registers" style="text;html=1;align=center;verticalAlign=middle;resizable=1;points=[];autosize=1;strokeColor=none;fillColor=#dae8fc;movable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontFamily=Verdana;fontSize=10;" parent="NGF7unSMzricVWb-dtFi-16" vertex="1">
+          <mxGeometry x="32.4995238095238" y="26.355714285714285" width="65" height="25.285714285714285" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-23" value="Thread 1" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0;dx=10;notch=10;fillColor=#d5e8d4;strokeColor=#82b366;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;fontFamily=Verdana;fontSize=10;" parent="MBMzgvPnqjGGaBJHlUTY-3" vertex="1">
+          <mxGeometry width="190" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="NGF7unSMzricVWb-dtFi-38" value="Save" style="html=1;shadow=0;dashed=0;align=center;verticalAlign=middle;shape=mxgraph.arrows2.arrow;dy=0.6;dx=40;flipH=1;notch=0;fillColor=#fff2cc;strokeColor=#d6b656;fontFamily=Verdana;fontSize=10;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;locked=0;connectable=1;" parent="MBMzgvPnqjGGaBJHlUTY-3" vertex="1">
+          <mxGeometry x="135" y="60" width="73" height="40" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

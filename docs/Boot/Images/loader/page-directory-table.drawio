@@ -1,0 +1,86 @@
+<mxfile host="65bd71144e">
+    <diagram name="第 1 页" id="mqMLETEW_sxK-47a7DRf">
+        <mxGraphModel dx="714" dy="638" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-1" value="Page Directory Table" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fillColor=#dae8fc;strokeColor=#6c8ebf;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="120" y="300" width="170" height="208" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-2" value="Entry 0" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="26" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-4" value="..." style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="52" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-199" value="Entry 768" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="78" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-198" value="Entry 769" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="104" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-197" value="..." style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="130" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-201" value="Entry 1022" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="156" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-244" style="edgeStyle=orthogonalEdgeStyle;rounded=1;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;fontSize=12;startSize=8;endSize=8;entryX=0;entryY=0.048;entryDx=0;entryDy=0;entryPerimeter=0;fontFamily=Verdana;strokeColor=default;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" source="SMfsCm32x8PexnDe32GZ-200" target="SMfsCm32x8PexnDe32GZ-1" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="-70.00000000000011" y="39.999999999999886" as="targetPoint"/>
+                        <Array as="points">
+                            <mxPoint x="-30" y="195"/>
+                            <mxPoint x="-30" y="10"/>
+                        </Array>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-200" value="Entry 1023" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-1" vertex="1">
+                    <mxGeometry y="182" width="170" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-202" value="Kernel Page Tables" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fillColor=#fff2cc;strokeColor=#d6b656;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="340" y="350" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-203" value="Table 0" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-202" vertex="1">
+                    <mxGeometry y="26" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-204" value="Table 1" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-202" vertex="1">
+                    <mxGeometry y="52" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-205" value="..." style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-202" vertex="1">
+                    <mxGeometry y="78" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-206" value="Table 254" style="text;strokeColor=#d6b656;fillColor=#fff2cc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-202" vertex="1">
+                    <mxGeometry y="104" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-210" value="Pages" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fontFamily=Verdana;fillColor=#d5e8d4;strokeColor=#82b366;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" vertex="1">
+                    <mxGeometry x="530" y="350" width="90" height="78" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-211" value="Kernel" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-210" vertex="1">
+                    <mxGeometry y="26" width="90" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-213" value="..." style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;fontFamily=Verdana;movable=0;resizable=0;deletable=0;editable=0;connectable=0;" parent="SMfsCm32x8PexnDe32GZ-210" vertex="1">
+                    <mxGeometry y="52" width="90" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-247" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;startSize=8;endSize=8;fontFamily=Verdana;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" source="SMfsCm32x8PexnDe32GZ-201" edge="1">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="340" y="467" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="SMfsCm32x8PexnDe32GZ-248" style="edgeStyle=none;curved=1;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontSize=12;startSize=8;endSize=8;fontFamily=Verdana;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" parent="1" source="SMfsCm32x8PexnDe32GZ-203" target="SMfsCm32x8PexnDe32GZ-210" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" style="edgeStyle=elbowEdgeStyle;html=1;entryX=-0.004;entryY=0.19;entryDx=0;entryDy=0;entryPerimeter=0;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" edge="1" parent="1" source="SMfsCm32x8PexnDe32GZ-2" target="SMfsCm32x8PexnDe32GZ-203">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;strokeColor=default;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" edge="1" parent="1" source="SMfsCm32x8PexnDe32GZ-199">
+                    <mxGeometry relative="1" as="geometry">
+                        <mxPoint x="340" y="391" as="targetPoint"/>
+                    </mxGeometry>
+                </mxCell>
+                <mxCell id="4" style="edgeStyle=orthogonalEdgeStyle;rounded=1;html=1;entryX=-0.003;entryY=0.578;entryDx=0;entryDy=0;entryPerimeter=0;strokeColor=default;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" edge="1" parent="1" source="SMfsCm32x8PexnDe32GZ-198" target="SMfsCm32x8PexnDe32GZ-204">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>

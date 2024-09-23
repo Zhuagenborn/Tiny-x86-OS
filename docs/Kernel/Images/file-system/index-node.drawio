@@ -1,0 +1,88 @@
+<mxfile host="65bd71144e">
+    <diagram id="2xmrFh7n0awRDu1Xcf4-" name="Page-1">
+        <mxGraphModel dx="1173" dy="766" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+            <root>
+                <mxCell id="0"/>
+                <mxCell id="1" parent="0"/>
+                <mxCell id="34" value="" style="group;movable=0;resizable=0;rotatable=0;deletable=0;editable=0;connectable=0;" vertex="1" connectable="0" parent="1">
+                    <mxGeometry x="180" y="130" width="560" height="312" as="geometry"/>
+                </mxCell>
+                <mxCell id="31" value="Block" style="html=1;strokeColor=#d79b00;fontFamily=Verdana;fillColor=#ffe6cc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" vertex="1" parent="34">
+                    <mxGeometry x="490" y="260" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="32" style="edgeStyle=elbowEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" edge="1" parent="34" source="30" target="31">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="2" value="Index Node" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;fontFamily=Verdana;strokeColor=#6c8ebf;fillColor=#dae8fc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry width="220" height="182" as="geometry"/>
+                </mxCell>
+                <mxCell id="10" value="Block" style="html=1;strokeColor=#d79b00;fontFamily=Verdana;fillColor=#ffe6cc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="320" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="11" value="Block" style="html=1;strokeColor=#d79b00;fontFamily=Verdana;fillColor=#ffe6cc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="320" y="50" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="12" value="Block" style="html=1;strokeColor=#d79b00;fontFamily=Verdana;fillColor=#ffe6cc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="320" y="100" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="14" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="34" source="2" target="11" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="13" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="34" source="5" target="10" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="15" style="edgeStyle=orthogonalEdgeStyle;html=1;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="34" source="6" target="12" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="16" value="Indirect Block Table" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;strokeColor=#82b366;fontFamily=Verdana;fillColor=#d5e8d4;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="275" y="182" width="160" height="130" as="geometry"/>
+                </mxCell>
+                <mxCell id="24" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="34" source="8" target="16" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="25" value="Block" style="html=1;strokeColor=#d79b00;fontFamily=Verdana;fillColor=#ffe6cc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="490" y="150" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="26" value="Block" style="html=1;strokeColor=#d79b00;fontFamily=Verdana;fillColor=#ffe6cc;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="490" y="206" width="70" height="40" as="geometry"/>
+                </mxCell>
+                <mxCell id="27" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="34" source="17" target="25" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="28" style="edgeStyle=orthogonalEdgeStyle;html=1;entryX=0;entryY=0.5;entryDx=0;entryDy=0;fontFamily=Verdana;movable=1;resizable=1;rotatable=1;deletable=1;editable=1;connectable=1;" parent="34" source="19" target="26" edge="1">
+                    <mxGeometry relative="1" as="geometry"/>
+                </mxCell>
+                <mxCell id="3" value="Attributes" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry y="26" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="5" value="Direct Block LBA 1" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry y="52" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="9" value="Direct Block LBA 2" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry y="78" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="7" value="..." style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry y="104" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="6" value="Direct Block LBA 12" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry y="130" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="8" value="Single Indirect Block Table LBA" style="text;strokeColor=#6c8ebf;fillColor=#dae8fc;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry y="156" width="220" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="17" value="Block LBA 1" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="275" y="208" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="19" value="Block LBA 2" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="275" y="234" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="21" value="..." style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" parent="34" vertex="1">
+                    <mxGeometry x="275" y="260" width="160" height="26" as="geometry"/>
+                </mxCell>
+                <mxCell id="30" value="Block LBA 128" style="text;strokeColor=#82b366;fillColor=#d5e8d4;align=center;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=1;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;fontFamily=Verdana;movable=1;resizable=1;deletable=1;editable=1;connectable=1;container=0;" vertex="1" parent="34">
+                    <mxGeometry x="275" y="286" width="160" height="26" as="geometry"/>
+                </mxCell>
+            </root>
+        </mxGraphModel>
+    </diagram>
+</mxfile>
