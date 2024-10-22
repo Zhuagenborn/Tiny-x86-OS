@@ -1,5 +1,9 @@
 /**
- * The disk.
+ * @file disk.h
+ * @brief The disk.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -37,9 +41,7 @@ public:
     //! The maximum LBA.
     static constexpr stl::size_t max_lba {max_size / sector_size - 1};
 
-    /**
-     * The partition.
-     */
+    //! The partition.
     class Part {
         friend class Disk;
 
@@ -78,9 +80,7 @@ public:
         Disk* disk_ {nullptr};
     };
 
-    /**
-     * The file partition.
-     */
+    //! The file partition.
     class FilePart : public Part {
     public:
         static FilePart& GetByTag(const TagList::Tag&) noexcept;
@@ -149,9 +149,7 @@ public:
             Block,
         };
 
-        /**
-         * The track record of a path search.
-         */
+        //! The track record of a path search.
         struct PathSearchRecord {
             //! The path already found.
             Path searched;
@@ -319,9 +317,7 @@ public:
         mutable TagList open_inodes_;
     };
 
-    /**
-     * Disk information.
-     */
+    //! Disk information.
     class Info {
     public:
         //! Initialize disk information based on the data returned by identify commands.
@@ -345,9 +341,7 @@ public:
     using PrimaryParts = stl::array<FilePart, prim_part_count>;
     using LogicParts = stl::array<FilePart, max_logic_part_count>;
 
-    /**
-     * Disk commands.
-     */
+    //! Disk commands.
     enum class Cmd {
         //! Read data.
         Read = 0x20,
@@ -448,7 +442,8 @@ private:
      * 2. The LBA of the next current logical partition.
      * 3. N/A.
      * 4. N/A.
-     * ```
+     *
+     * @code
      *                              Disk
      *                      ┌───────────────────┐
      *                      │        MBR        │
@@ -482,7 +477,7 @@ private:
      *                    │ ├ ─ ─ ─ ─ ─ ─ ─ ─ ─ ┤ │ │ Logical Partition
      *                    │ │       Data        │ │ │
      *                    ▼ └───────────────────┘ ▼ ▼
-     * ```
+     * @endcode
      *
      * @param lba The LBA of a boot record.
      * @param new_disk Whether a new disk is being scanned.

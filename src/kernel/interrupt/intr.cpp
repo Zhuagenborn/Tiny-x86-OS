@@ -21,11 +21,10 @@ namespace {
 extern "C" {
 
 /**
- * @brief
- * The entry points of interrupts, defined in @p src/interrupt/intr.asm.
- * They will be registered in the interrupt descriptor table.
+ * @brief The entry points of interrupts, defined in @p src/interrupt/intr.asm.
  *
  * @details
+ * They will be registered in the interrupt descriptor table.
  * When an interrupt @p i occurs:
  * 1. The CPU jumps to the entry point @p intr_entries[i].
  * 2. After saving registers, @p intr_entries[i] calls the interrupt handler @p intr_handlers[i].

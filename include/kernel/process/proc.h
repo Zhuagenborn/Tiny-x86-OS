@@ -1,5 +1,9 @@
 /**
- * User process management.
+ * @file proc.h
+ * @brief User process management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -11,9 +15,7 @@
 
 namespace tsk {
 
-/**
- * The user process.
- */
+//! The user process.
 class Process {
 public:
     //! The priority of the main thread.
@@ -108,6 +110,7 @@ private:
     Process& CopyMemTo(Process&, void* buf, stl::size_t buf_size) noexcept;
 
     /**
+     * @details
      * Each process has its own virtual address space.
      * Different virtual address pools allow processes to use the same virtual address,
      * but mapped to various physical addresses with the help of page directory tables.
@@ -117,6 +120,7 @@ private:
     mem::MemBlockDescTab mem_block_descs_;
 
     /**
+     * @details
      * Each process has its own page directory table.
      * Different page directory tables map the same virtual address in different processes to various physical addresses.
      */

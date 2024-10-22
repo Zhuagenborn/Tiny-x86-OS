@@ -23,7 +23,10 @@ inline constexpr stl::uintptr_t krnl_heap_base {krnl_base + 0x00100000};
 class MemArena;
 
 /**
+ * @brief
  * The fix-sized memory block arranged in a memory arena @p MemArena.
+ *
+ * @details
  * They are linked together in the free block list of a memory block descriptor @p MemBlockDesc.
  */
 class MemBlock {
@@ -55,6 +58,9 @@ private:
 };
 
 /**
+ * @brief The momory arena.
+ *
+ * @details
  * The momory arena is a memory page containing metadata,
  * and a number of fix-sized memory blocks @p MemBlock, like a storage.
  */
@@ -72,6 +78,7 @@ public:
     }
 
     /**
+     * @details
      * If the arena is not a large arena, it refers to the block descriptor,
      * otherwise @p nullptr.
      */

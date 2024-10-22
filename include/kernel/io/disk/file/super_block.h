@@ -1,5 +1,9 @@
 /**
- * The super block.
+ * @file super_block.h
+ * @brief The super block.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -17,7 +21,8 @@ namespace io::fs {
  * @details
  * The super block is 4096 bytes in size and starts at offset @p 4096 bytes in a partition, behind the boot sector.
  * It maintains information about the entire file system.
- * ```
+ *
+ * @code
  *                                                     Disk
  *                                    ┌─────┬───────────┬─────┬───────────┐
  *                                    │ MBR │ Partition │ ... │ Partition │
@@ -28,7 +33,7 @@ namespace io::fs {
  * ┌─────────────┬─────────────┬──────────────┬───────────────────┬─────────────┬────────────────┬────────┐
  * │ Boot Sector │ Super Block │ Block Bitmap │ Index Node Bitmap │ Index Nodes │ Root Directory │ Blocks │
  * └─────────────┴─────────────┴──────────────┴───────────────────┴─────────────┴────────────────┴────────┘
- * ```
+ * @endcode
  */
 struct SuperBlock {
 private:
@@ -77,9 +82,7 @@ public:
     stl::size_t root_inode_idx;
 };
 
-/**
- * The 4096-byte padded super block.
- */
+//! The 4096-byte padded super block.
 class PaddedSuperBlock : public SuperBlock {
 public:
     /**
@@ -109,6 +112,7 @@ private:
     PaddedSuperBlock& WriteRootDirNode(Disk& disk, void* io_buf, stl::size_t io_buf_size) noexcept;
 
     /**
+     * @details
      * Write the entries in the root directory to a disk, including:
      * - The current directory.
      * - The parent directory.

@@ -1,5 +1,9 @@
 /**
- * *Intel 8253* Programmable Interval Timer.
+ * @file timer.h
+ * @brief *Intel 8253* Programmable Interval Timer.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

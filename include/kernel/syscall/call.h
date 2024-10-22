@@ -1,5 +1,9 @@
 /**
- * System calls.
+ * @file call.h
+ * @brief System calls.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -15,7 +19,9 @@ inline constexpr stl::size_t count {0x60};
 using Handler = stl::int32_t (*)(void*) noexcept;
 
 /**
- * Types of system calls.
+ * @brief Types of system calls.
+ *
+ * @details
  * Each type corresponds to a kernel function.
  */
 enum class SysCallType {
@@ -36,7 +42,9 @@ enum class SysCallType {
 };
 
 /**
- * The system call handler table.
+ * @brief The system call handler table.
+ *
+ * @details
  * It can be regarded as a manager for an array of function pointers.
  */
 template <stl::size_t count>

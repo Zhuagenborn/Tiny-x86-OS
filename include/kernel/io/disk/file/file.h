@@ -1,5 +1,9 @@
 /**
- * Underlying file storage.
+ * @file file.h
+ * @brief Underlying file storage.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

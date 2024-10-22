@@ -1,5 +1,9 @@
 /**
- * The thread-safe text console.
+ * @file console.h
+ * @brief The thread-safe text console.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

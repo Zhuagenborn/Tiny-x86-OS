@@ -63,9 +63,7 @@ void DiskIntrHandler(const stl::size_t intr_num) noexcept {
 
 #pragma pack(push, 1)
 
-/**
- * The partition table entry.
- */
+//! The partition table entry.
 struct PartTabEntry {
     //! Whether the partition is the system boot partition.
     bool is_bootable;
@@ -126,9 +124,7 @@ static_assert(sizeof(BootRecord) == Disk::sector_size);
 
 #pragma pack(pop)
 
-/**
- * The 8-bit I/O register.
- */
+//! The 8-bit I/O register.
 class Register {
 public:
     constexpr Register(const stl::uint8_t val = 0) noexcept : val_ {val} {}
@@ -143,9 +139,7 @@ protected:
 
 static_assert(sizeof(Register) == sizeof(stl::uint8_t));
 
-/**
- * The device register.
- */
+//! The device register.
 class DeviceReg : public Register {
 public:
     constexpr DeviceReg(const stl::uint8_t val = 0) noexcept : Register {val} {
@@ -208,9 +202,7 @@ private:
     }
 };
 
-/**
- * The status register.
- */
+//! The status register.
 class StatusReg : public Register {
 public:
     using Register::Register;
@@ -238,9 +230,7 @@ private:
     static constexpr stl::size_t busy_pos {7};
 };
 
-/**
- * The LBA byte register.
- */
+//! The LBA byte register.
 template <stl::size_t start_bit>
 class LbaReg : public Register {
 public:
@@ -255,25 +245,19 @@ protected:
     ~LbaReg() noexcept = default;
 };
 
-/**
- * The LBA bits `0`-`7` register.
- */
+//! The LBA bits `0`-`7` register.
 class LbaLowReg : public LbaReg<0> {
 public:
     using LbaReg::LbaReg;
 };
 
-/**
- * The LBA bits `8`-`15` register.
- */
+//! The LBA bits `8`-`15` register.
 class LbaMidReg : public LbaReg<sizeof(stl::uint8_t) * bit::byte_len> {
 public:
     using LbaReg::LbaReg;
 };
 
-/**
- * The LBA bits `16`-`23` register.
- */
+//! The LBA bits `16`-`23` register.
 class LbaHighReg : public LbaReg<sizeof(stl::uint16_t) * bit::byte_len> {
 public:
     using LbaReg::LbaReg;

@@ -1,5 +1,9 @@
 /**
- * The *Intel 8042* keyboard controller.
+ * @file keyboard.h
+ * @brief The *Intel 8042* keyboard controller.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

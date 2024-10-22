@@ -1,5 +1,9 @@
 /**
- * File path operations.
+ * @file path.h
+ * @brief File path operations.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -38,11 +42,11 @@ public:
      * @brief Get the depth of a path.
      *
      * @details
-     * ```c++
+     * @code {.cpp}
      * Path::GetDepth("/") == 0;
      * Path::GetDepth("/a") == 1;
      * Path::GetDepth("/a/b") == 2;
-     * ```
+     * @endcode
      */
     static stl::size_t GetDepth(stl::string_view) noexcept;
 
@@ -50,11 +54,11 @@ public:
      * @brief Get the file name of a path.
      *
      * @details
-     * ```c++
+     * @code {.cpp}
      * Path::GetFileName("/") == "";
      * Path::GetFileName("/a") == "a";
      * Path::GetFileName("/a/") == "";
-     * ```
+     * @endcode
      */
     static stl::string_view GetFileName(stl::string_view) noexcept;
 

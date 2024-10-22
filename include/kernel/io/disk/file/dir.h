@@ -1,5 +1,9 @@
 /**
- * Underlying directory storage.
+ * @file dir.h
+ * @brief Underlying directory storage.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -40,7 +44,9 @@ struct Directory {
     void Rewind() noexcept;
 
     /**
-     * The index node for directory entry storage.
+     * @brief The index node for directory entry storage.
+     *
+     * @details
      * It is @p nullptr when the directory is not open.
      */
     IdxNode* inode {nullptr};
@@ -60,7 +66,8 @@ enum class FileType { Unknown, Regular, Directory };
  *
  * Index nodes @p IdxNode do not indicate their data type.
  * Instead, we use directory entries to determine whether an item is a file or a directory.
- * ```
+ *
+ * @code
  *                                       Root Directory
  *                          ┌──────────────────┬──────────────────┐
  *                          │                  │   Name: "file"   │
@@ -96,7 +103,7 @@ enum class FileType { Unknown, Regular, Directory };
  * ┌────────────────┐     ┌─────────────┐
  * │ Index Node (3) │ ──► │ "file" Data │
  * └────────────────┘     └─────────────┘
- * ```
+ * @endcode
  */
 struct DirEntry {
     DirEntry() noexcept = default;

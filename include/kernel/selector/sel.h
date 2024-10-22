@@ -1,5 +1,9 @@
 /**
- * Segment selectors.
+ * @file sel.h
+ * @brief Segment selectors.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -19,12 +23,12 @@ enum class DescTabType {
 };
 
 /**
- * @brief
- * The segment selector.
- * It can identify a descriptor in a descriptor table.
+ * @brief The segment selector.
  *
  * @details
- * ```
+ * It can identify a descriptor in a descriptor table.
+ *
+ * @code
  *    15-3    2   1-0
  * ┌───────┬────┬─────┐
  * │ Index │ TI │ RPL │
@@ -32,7 +36,7 @@ enum class DescTabType {
  *           ▲
  *           └─ 0: The index is for the global descriptor table.
  *              1: The index is for a local descriptor table.
- * ```
+ * @endcode
  */
 class Selector {
 public:

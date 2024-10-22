@@ -1,5 +1,9 @@
 /**
- * The global descriptor table.
+ * @file tab.h
+ * @brief The global descriptor table.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

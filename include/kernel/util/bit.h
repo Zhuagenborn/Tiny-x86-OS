@@ -1,5 +1,9 @@
 /**
- * The bit manipulation.
+ * @file bit.h
+ * @brief The bit manipulation.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

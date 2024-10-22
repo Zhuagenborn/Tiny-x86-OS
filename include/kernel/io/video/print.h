@@ -1,5 +1,9 @@
 /**
- * Text printing.
+ * @file print.h
+ * @brief Text printing.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

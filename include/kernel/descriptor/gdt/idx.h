@@ -1,5 +1,9 @@
 /**
- * Global descriptor indexes.
+ * @file idx.h
+ * @brief Global descriptor indexes.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

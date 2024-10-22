@@ -1,5 +1,9 @@
 /**
- * User-mode process management.
+ * @file proc.h
+ * @brief User-mode process management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -8,6 +12,7 @@
 
 namespace usr::tsk {
 
+//! User-mode process management.
 class Process {
 public:
     Process() = delete;

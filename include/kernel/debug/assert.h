@@ -1,5 +1,9 @@
 /**
- * Diagnostics tools.
+ * @file assert.h
+ * @brief  * Diagnostics tools.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

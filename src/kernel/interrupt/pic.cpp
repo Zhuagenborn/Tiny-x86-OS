@@ -60,9 +60,7 @@ protected:
 
 static_assert(sizeof(CmdWord) == sizeof(stl::uint8_t));
 
-/**
- * Initialization Command Word 1.
- */
+//! Initialization Command Word 1.
 class InitCmdWord1 : public CmdWord {
 public:
     constexpr InitCmdWord1(const stl::uint8_t val = 0) noexcept : CmdWord {val} {
@@ -107,9 +105,7 @@ private:
     static constexpr stl::size_t ltim_pos {3};
 };
 
-/**
- * Initialization Command Word 2.
- */
+//! Initialization Command Word 2.
 class InitCmdWord2 : public CmdWord {
 public:
     using CmdWord::CmdWord;
@@ -127,9 +123,7 @@ private:
     static constexpr stl::size_t id_len {3};
 };
 
-/**
- * Initialization Command Word 3 for the master *Intel 8259A* chip.
- */
+//! Initialization Command Word 3 for the master *Intel 8259A* chip.
 class MasterInitCmdWord3 : public CmdWord {
 public:
     using CmdWord::CmdWord;
@@ -142,9 +136,7 @@ public:
     }
 };
 
-/**
- * Initialization Command Word 3 for the slave *Intel 8259A* chip.
- */
+//! Initialization Command Word 3 for the slave *Intel 8259A* chip.
 class SlaveInitCmdWord3 : public CmdWord {
 public:
     using CmdWord::CmdWord;
@@ -157,9 +149,7 @@ public:
     }
 };
 
-/**
- * Initialization Command Word 4.
- */
+//! Initialization Command Word 4.
 class InitCmdWord4 : public CmdWord {
 public:
     using CmdWord::CmdWord;
@@ -197,9 +187,7 @@ private:
     static constexpr stl::size_t aeoi_pos {x86_pos + 1};
 };
 
-/**
- * Operation Command Word 1.
- */
+//! Operation Command Word 1.
 class OpCmdWord1 : public CmdWord {
 public:
     using CmdWord::CmdWord;

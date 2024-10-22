@@ -42,9 +42,7 @@ inline constexpr stl::size_t indirect_sector_count_per_inode {
 inline constexpr stl::size_t sector_count_per_inode {fs::IdxNode::direct_block_count
                                                      + indirect_sector_count_per_inode};
 
-/**
- * The position of an index node in a partition.
- */
+//! The position of an index node in a partition.
 struct IdxNodePos {
     IdxNodePos(const Disk::FilePart& part, const fs::IdxNode& inode) noexcept :
         IdxNodePos {part, inode.idx} {}

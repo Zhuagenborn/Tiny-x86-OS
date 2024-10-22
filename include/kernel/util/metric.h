@@ -1,3 +1,11 @@
+/**
+ * @file metric.h
+ * @brief Metrics.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
+ */
+
 #pragma once
 
 #include "kernel/stl/cstdint.h"

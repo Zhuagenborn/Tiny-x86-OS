@@ -1,5 +1,9 @@
 /**
- * Multi-threading synchronization.
+ * @file sync.h
+ * @brief Multi-threading synchronization.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
