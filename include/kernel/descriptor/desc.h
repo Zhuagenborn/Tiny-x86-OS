@@ -1,5 +1,9 @@
 /**
- * Descriptors.
+ * @file desc.h
+ * @brief Descriptors.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -62,7 +66,9 @@ enum class NonSysType {
 };
 
 /**
- * The descriptor attribute.
+ * @brief The descriptor attribute.
+ *
+ * @details
  * It is located in the bits `40`-`47` of a descriptor.
  */
 class Attribute {
@@ -240,7 +246,9 @@ protected:
 static_assert(sizeof(Descriptor) == sizeof(stl::uint64_t));
 
 /**
- * The gate descriptor.
+ * @brief The gate descriptor.
+ *
+ * @details
  * There are four types of gate descriptors:
  * - The task gate descriptor.
  * - The call gate descriptor.
@@ -309,13 +317,13 @@ private:
 static_assert(sizeof(GateDesc) == sizeof(stl::uint64_t));
 
 /**
- * @brief
- * The segment descriptor.
+ * @brief The segment descriptor.
+ *
+ * @details
  * It is a part of memory segmentation, used for translating a logical address into a linear address.
  * It describes the memory segment referred to in the logical address.
  *
- * @details
- * ```
+ * @code
  * --------------------------------------------- High 32 bits ---------------------------------------------
  *      31-24    23   22   21   20       19-16     15  14-13  12  11-8       7-0
  * ┌────────────┬───┬─────┬───┬─────┬─────────────┬───┬─────┬───┬──────┬────────────┐
@@ -338,7 +346,7 @@ static_assert(sizeof(GateDesc) == sizeof(stl::uint64_t));
  * ┌───────────┬────────────┐
  * │ Base 15-0 │ Limit 15-0 │
  * └───────────┴────────────┘
- * ```
+ * @endcode
  */
 class SegDesc : public Descriptor {
 public:
@@ -435,7 +443,9 @@ static_assert(sizeof(SegDesc) == sizeof(stl::uint64_t));
 #pragma pack(push, 1)
 
 /**
- * The descriptor table register.
+ * @brief The descriptor table register.
+ *
+ * @details
  * They store the location of a descriptor table.
  */
 class DescTabReg {
@@ -505,9 +515,7 @@ protected:
     virtual const T& GetDesc(stl::size_t) const noexcept = 0;
 };
 
-/**
- * The descriptor table that refers to a contiguous sequence of descriptors.
- */
+//! The descriptor table that refers to a contiguous sequence of descriptors.
 template <typename T>
 class DescTabSpan : public DescTab<T> {
 public:
@@ -531,9 +539,7 @@ protected:
     T* descs_;
 };
 
-/**
- * The descriptor table that uses a built-in array to store descriptors.
- */
+//! The descriptor table that uses a built-in array to store descriptors.
 template <typename T, stl::size_t count>
 class DescTabArray : public DescTab<T> {
 public:

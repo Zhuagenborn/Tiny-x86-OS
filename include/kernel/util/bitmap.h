@@ -1,5 +1,9 @@
 /**
- * The bitmap.
+ * @file bitmap.h
+ * @brief The bitmap.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

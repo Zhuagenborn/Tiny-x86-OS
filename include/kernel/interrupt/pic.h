@@ -1,5 +1,9 @@
 /**
- * *Intel 8259A* Programmable Interrupt Controller.
+ * @file pic.h
+ * @brief *Intel 8259A* Programmable Interrupt Controller.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

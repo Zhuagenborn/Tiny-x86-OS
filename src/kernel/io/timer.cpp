@@ -55,9 +55,7 @@ enum class CountMode {
 
 enum class DigitalMode { Binary, BinaryCodedDecimal };
 
-/**
- * The control word.
- */
+//! The control word.
 class CtrlWord {
 public:
     constexpr CtrlWord(const stl::uint8_t val = 0) noexcept : val_ {val} {}
@@ -128,7 +126,9 @@ void InitCounter(const stl::size_t freq_per_second) noexcept {
 }
 
 /**
- * The clock interrupt handler.
+ * @brief The clock interrupt handler.
+ *
+ * @details
  * It increases ticks and schedules threads.
  */
 void ClockIntrHandler(stl::size_t) noexcept {

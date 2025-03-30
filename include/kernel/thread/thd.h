@@ -1,5 +1,9 @@
 /**
- * Thread management.
+ * @file thd.h
+ * @brief Thread management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -22,7 +26,9 @@ class Process;
 inline constexpr stl::size_t max_open_file_count {8};
 
 /**
- * Utilities for manipulating the file descriptor table of the current process.
+ * @brief Utilities for manipulating the file descriptor table of the current process.
+ *
+ * @details
  * They are wrappers for @p FileDescTab.
  */
 class ProcFileDescTab {
@@ -146,7 +152,8 @@ private:
  * @details
  * Here is the memory layout of a thread block and its stack.
  * The total size is one memory page.
- * ```
+ *
+ * @code
  * 0xFFF ┌─────────────────┐ `GetKrnlStackBottom`
  *       │ Interrupt Stack │
  *       ├─────────────────┤ `GetIntrStack`
@@ -161,7 +168,7 @@ private:
  *       ├─────────────────┤
  *       │  Control Block  │
  * 0x000 └─────────────────┘ `this`
- * ```
+ * @endcode
  *
  * @warning
  * The compiler might allocate more memory for the control block in a thread, especially with debug options.
@@ -206,7 +213,9 @@ public:
     Process* GetProcess() const noexcept;
 
     /**
-     * Get the bottom address of the kernel thread stack.
+     * @brief Get the bottom address of the kernel thread stack.
+     *
+     * @details
      * When switching threads, its value corresponds to @p ESP0 of a task state segment.
      */
     stl::uintptr_t GetKrnlStackBottom() const noexcept;
@@ -233,16 +242,19 @@ public:
     void Sleep(stl::size_t milliseconds) noexcept;
 
     /**
-     * Temporarily remove the thread from the CPU and schedule another thread to run.
+     * @brief Temporarily remove the thread from the CPU and schedule another thread to run.
+     *
+     * @details
      * The removed thread is marked as ready to run and its remaining tick will not be reset.
      */
     void Yield() noexcept;
 
     /**
-     * Remove the thread from the CPU and schedule another thread to run.
-     * If the removed thread is running, its remaining tick will be reset and it is marked as ready to run.
+     * @brief Remove the thread from the CPU and schedule another thread to run.
      *
      * @details
+     * If the removed thread is running, its remaining tick will be reset and it is marked as ready to run.
+     *
      * The scheduler uses the basic First-In-First-Out algorithm.
      * The thread priority only represents the maximum number of time slices a thread can run in the CPU at a time.
      * High-priority threads cannot directly preempt running low-priority threads.
@@ -250,6 +262,7 @@ public:
     void Schedule() noexcept;
 
     /**
+     * @details
      * Whether the stack guard is valid.
      * It should be called before manipulating a thread to ensure that the control block is still valid.
      */
@@ -311,6 +324,7 @@ protected:
      */
     struct StartupStack : public SwitchStack {
         /**
+         * @details
          * When @p StartupCallback is called, it assumes that the stack top is a return address.
          * We have to skip this place.
          */
@@ -326,6 +340,7 @@ protected:
     //! We use two tags to manage a thread in different lists.
     struct Tags {
         /**
+         * @details
          * The tag for other lists, for example:
          * - The list for ready threads.
          * - The list for waiting threads.
@@ -339,12 +354,14 @@ protected:
     static Thread& GetByTag(const TagList::Tag&, TagType) noexcept;
 
     /**
+     * @details
      * Initialize a thread control block and add the thread to the all-thread list.
      * Currently it is not ready to be scheduled.
      */
     Thread& Init(stl::string_view name, stl::size_t priority, Process* proc = nullptr) noexcept;
 
     /**
+     * @details
      * Set a thread callback and add the thread to the ready list.
      * Now it can be scheduled and run.
      */
@@ -366,6 +383,7 @@ protected:
     StartupStack& GetStartupStack() noexcept;
 
     /**
+     * @details
      * Load the thread environment, including:
      * - The page directory table.
      * - The task state segment.
@@ -402,6 +420,7 @@ protected:
     stl::size_t priority_ {0};
 
     /**
+     * @details
      * The number of remaining ticks the thread can run in the CPU at this time.
      * When time slices run out, the thread is removed from the CPU and waits to be scheduled again.
      */
@@ -418,7 +437,9 @@ protected:
 };
 
 /**
- * The kernel thread.
+ * @brief The kernel thread.
+ *
+ * @details
  * They are created by the kernel and do not have a parent process.
  */
 class KrnlThread : public Thread {

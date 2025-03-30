@@ -1,5 +1,9 @@
 /**
- * The task state segment.
+ * @file tss.h
+ * @brief The task state segment.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -61,7 +65,9 @@ struct TaskStateSeg {
 void InitTaskStateSeg() noexcept;
 
 /**
- * Get the task state segment.
+ * @brief Get the task state segment.
+ *
+ * @details
  * It is shared by all tasks.
  */
 TaskStateSeg& GetTaskStateSeg() noexcept;

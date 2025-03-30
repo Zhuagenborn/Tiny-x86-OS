@@ -1,5 +1,9 @@
 /**
- * Memory management.
+ * @file pool.h
+ * @brief Memory management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -123,7 +127,8 @@ private:
  * @details
  * A memory block descriptor manages fix-sized block @p MemBlock arranged in memory arenas @p MemArena.
  * A user process has multiple memory block descriptors for heap memory allocations of different sizes.
- * ```
+ *
+ * @code
  *           Arena                     Arena
  *       ┌────────────┐            ┌────────────┐
  *       │ Descriptor │ ──────┬─── │ Descriptor │
@@ -143,7 +148,7 @@ private:
  *       ├─────────────┤
  *       │    Size     │
  *       └─────────────┘
- * ```
+ * @endcode
  */
 class MemBlockDesc {
 public:

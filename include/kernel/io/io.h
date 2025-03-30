@@ -1,5 +1,9 @@
 /**
- * Port I/O and register control.
+ * @file io.h
+ * @brief Port I/O and register control.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -9,9 +13,7 @@
 
 namespace io {
 
-/**
- * The @p EFLAGS register.
- */
+//! The @p EFLAGS register.
 class EFlags {
 public:
     static EFlags Get() noexcept;

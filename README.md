@@ -9,7 +9,7 @@
 
 ## Introduction
 
-This project is a tiny *Intel x86* operating system written in *assembly* and *C++*, developed on *Ubuntu* and *Bochs*.
+A simple *Intel x86* operating system written in *assembly* and *C++*, developed on *Ubuntu* and *Bochs*.
 
 - Boot
   - The master boot record for system startup.
@@ -65,6 +65,229 @@ This project is a tiny *Intel x86* operating system written in *assembly* and *C
 ## References
 
 - [*《操作系统真象还原》郑钢*](https://github.com/yifengyou/os-elephant)
+
+## Structure
+
+```console
+.
+├── CITATION.cff
+├── Debugging.md
+├── LICENSE
+├── Makefile
+├── README.md
+├── docs
+│   ├── Boot
+│   │   ├── Images
+│   │   │   └── loader
+│   │   │       ├── memory-paging.drawio
+│   │   │       ├── memory-paging.svg
+│   │   │       ├── page-directory-table.drawio
+│   │   │       └── page-directory-table.svg
+│   │   ├── Loader.md
+│   │   └── Master Boot Record.md
+│   ├── Getting Started
+│   │   ├── Building the System.md
+│   │   └── Development Environment.md
+│   ├── Kernel
+│   │   ├── File System.md
+│   │   ├── Images
+│   │   │   ├── file-system
+│   │   │   │   ├── directory-entries.drawio
+│   │   │   │   ├── directory-entries.svg
+│   │   │   │   ├── index-node.drawio
+│   │   │   │   └── index-node.svg
+│   │   │   ├── memory
+│   │   │   │   ├── memory-heap.drawio
+│   │   │   │   ├── memory-heap.svg
+│   │   │   │   ├── memory-pools.drawio
+│   │   │   │   └── memory-pools.svg
+│   │   │   └── threads
+│   │   │       ├── thread-block.drawio
+│   │   │       ├── thread-block.svg
+│   │   │       ├── thread-lists.drawio
+│   │   │       ├── thread-lists.svg
+│   │   │       ├── thread-switching.drawio
+│   │   │       └── thread-switching.svg
+│   │   ├── Interrupts.md
+│   │   ├── Memory.md
+│   │   ├── System Calls.md
+│   │   ├── Threads.md
+│   │   └── User Processes.md
+│   └── badges
+│       ├── C++.svg
+│       ├── License-MIT.svg
+│       ├── Linux.svg
+│       ├── Made-with-GitHub-Actions.svg
+│       ├── Made-with-Make.svg
+│       └── NASM.svg
+├── include
+│   ├── boot
+│   │   └── boot.inc
+│   ├── kernel
+│   │   ├── debug
+│   │   │   └── assert.h
+│   │   ├── descriptor
+│   │   │   ├── desc.h
+│   │   │   ├── desc.inc
+│   │   │   └── gdt
+│   │   │       ├── idx.h
+│   │   │       └── tab.h
+│   │   ├── interrupt
+│   │   │   ├── intr.h
+│   │   │   └── pic.h
+│   │   ├── io
+│   │   │   ├── disk
+│   │   │   │   ├── disk.h
+│   │   │   │   ├── disk.inc
+│   │   │   │   ├── file
+│   │   │   │   │   ├── dir.h
+│   │   │   │   │   ├── file.h
+│   │   │   │   │   ├── inode.h
+│   │   │   │   │   └── super_block.h
+│   │   │   │   └── ide.h
+│   │   │   ├── file
+│   │   │   │   ├── dir.h
+│   │   │   │   ├── file.h
+│   │   │   │   └── path.h
+│   │   │   ├── io.h
+│   │   │   ├── keyboard.h
+│   │   │   ├── timer.h
+│   │   │   └── video
+│   │   │       ├── console.h
+│   │   │       ├── print.h
+│   │   │       └── print.inc
+│   │   ├── krnl.h
+│   │   ├── krnl.inc
+│   │   ├── memory
+│   │   │   ├── page.h
+│   │   │   ├── page.inc
+│   │   │   └── pool.h
+│   │   ├── process
+│   │   │   ├── elf.inc
+│   │   │   ├── proc.h
+│   │   │   └── tss.h
+│   │   ├── selector
+│   │   │   ├── sel.h
+│   │   │   └── sel.inc
+│   │   ├── stl
+│   │   │   ├── algorithm.h
+│   │   │   ├── array.h
+│   │   │   ├── cerron.h
+│   │   │   ├── cmath.h
+│   │   │   ├── cstddef.h
+│   │   │   ├── cstdint.h
+│   │   │   ├── cstdlib.h
+│   │   │   ├── cstring.h
+│   │   │   ├── iterator.h
+│   │   │   ├── mutex.h
+│   │   │   ├── semaphore.h
+│   │   │   ├── source_location.h
+│   │   │   ├── span.h
+│   │   │   ├── string_view.h
+│   │   │   ├── type_traits.h
+│   │   │   └── utility.h
+│   │   ├── syscall
+│   │   │   └── call.h
+│   │   ├── thread
+│   │   │   ├── sync.h
+│   │   │   └── thd.h
+│   │   └── util
+│   │       ├── bit.h
+│   │       ├── bitmap.h
+│   │       ├── block_queue.h
+│   │       ├── format.h
+│   │       ├── metric.h
+│   │       ├── metric.inc
+│   │       └── tag_list.h
+│   └── user
+│       ├── io
+│       │   ├── file
+│       │   │   ├── dir.h
+│       │   │   └── file.h
+│       │   └── video
+│       │       └── console.h
+│       ├── memory
+│       │   └── pool.h
+│       ├── process
+│       │   └── proc.h
+│       ├── stl
+│       │   └── cstdint.h
+│       └── syscall
+│           └── call.h
+└── src
+    ├── boot
+    │   ├── loader.asm
+    │   └── mbr.asm
+    ├── kernel
+    │   ├── debug
+    │   │   └── assert.cpp
+    │   ├── descriptor
+    │   │   ├── desc.asm
+    │   │   └── gdt
+    │   │       └── tab.cpp
+    │   ├── interrupt
+    │   │   ├── intr.asm
+    │   │   ├── intr.cpp
+    │   │   └── pic.cpp
+    │   ├── io
+    │   │   ├── disk
+    │   │   │   ├── disk.cpp
+    │   │   │   ├── file
+    │   │   │   │   ├── dir.cpp
+    │   │   │   │   ├── file.cpp
+    │   │   │   │   ├── inode.cpp
+    │   │   │   │   └── super_block.cpp
+    │   │   │   ├── ide.cpp
+    │   │   │   └── part.cpp
+    │   │   ├── file
+    │   │   │   ├── dir.cpp
+    │   │   │   ├── file.cpp
+    │   │   │   └── path.cpp
+    │   │   ├── io.asm
+    │   │   ├── io.cpp
+    │   │   ├── keyboard.cpp
+    │   │   ├── timer.cpp
+    │   │   └── video
+    │   │       ├── console.cpp
+    │   │       ├── print.asm
+    │   │       └── print.cpp
+    │   ├── krnl.cpp
+    │   ├── main.cpp
+    │   ├── memory
+    │   │   ├── page.asm
+    │   │   ├── page.cpp
+    │   │   └── pool.cpp
+    │   ├── process
+    │   │   ├── proc.cpp
+    │   │   ├── tss.asm
+    │   │   └── tss.cpp
+    │   ├── stl
+    │   │   ├── cstring.cpp
+    │   │   ├── mutex.cpp
+    │   │   └── semaphore.cpp
+    │   ├── syscall
+    │   │   ├── call.asm
+    │   │   └── call.cpp
+    │   ├── thread
+    │   │   ├── sync.cpp
+    │   │   ├── thd.asm
+    │   │   └── thd.cpp
+    │   └── util
+    │       ├── bitmap.cpp
+    │       ├── format.cpp
+    │       └── tag_list.cpp
+    └── user
+        ├── io
+        │   ├── file
+        │   │   ├── dir.cpp
+        │   │   └── file.cpp
+        │   └── video
+        │       └── console.cpp
+        ├── memory
+        │   └── pool.cpp
+        └── process
+            └── proc.cpp
+```
 
 ## License
 

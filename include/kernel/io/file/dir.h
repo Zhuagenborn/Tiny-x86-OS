@@ -1,5 +1,9 @@
 /**
- * Directory management.
+ * @file dir.h
+ * @brief Directory management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -8,9 +12,7 @@
 
 namespace io {
 
-/**
- * The wrapper for directory functions of @p Disk::FilePart.
- */
+//! The wrapper for directory functions of @p Disk::FilePart.
 class Directory {
 public:
     //! Create a directory.

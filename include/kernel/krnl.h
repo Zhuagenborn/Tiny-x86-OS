@@ -1,5 +1,9 @@
 /**
- * Basic kernel configurations.
+ * @file krnl.h
+ * @brief Basic kernel configurations.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once

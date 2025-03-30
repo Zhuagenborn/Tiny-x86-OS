@@ -1,5 +1,9 @@
 /**
- * The tag list.
+ * @file tag_list.h
+ * @brief The tag list.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -9,17 +13,18 @@
 /**
  * @brief
  * The doubly linked tag list.
- * It connects a number of tags. Each tag is a member of an object.
  *
  * @details
- * ```
+ * It connects a number of tags. Each tag is a member of an object.
+ *
+ * @code
  *              Object         Object
  *  Head       ┌───────┐      ┌───────┐      Tail
  *  ┌───┐ ───► │ ┌───┐ │ ───► │ ┌───┐ │ ───► ┌───┐
  *  │Tag│      │ │Tag│ │      │ │Tag│ │      │Tag│
  *  └───┘ ◄─── │ └───┘ │ ◄─── │ └───┘ │ ◄─── └───┘
  *             └───────┘      └───────┘
- * ```
+ * @endcode
  */
 class TagList {
 public:

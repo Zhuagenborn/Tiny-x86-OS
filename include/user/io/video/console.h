@@ -1,5 +1,9 @@
 /**
- * The user-mode thread-safe text console.
+ * @file console.h
+ * @brief The user-mode thread-safe text console.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -8,6 +12,7 @@
 
 namespace usr::io {
 
+//! The user-mode thread-safe text console.
 class Console {
 public:
     Console() = delete;

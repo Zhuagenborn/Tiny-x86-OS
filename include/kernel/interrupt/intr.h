@@ -1,5 +1,9 @@
 /**
- * The interrupt.
+ * @file intr.h
+ * @brief The interrupt.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -38,9 +42,7 @@ enum class Intr {
     SysCall = count - 1
 };
 
-/**
- * The interrupt descriptor table.
- */
+//! The interrupt descriptor table.
 template <stl::size_t count>
 class IntrDescTab : public desc::DescTabArray<desc::GateDesc, count> {
 public:
@@ -59,7 +61,9 @@ public:
 using Handler = void (*)(stl::size_t) noexcept;
 
 /**
- * The interrupt handler table.
+ * @brief The interrupt handler table.
+ *
+ * @details
  * It can be regarded as a manager for an array of function pointers.
  */
 template <stl::size_t count>
@@ -137,7 +141,7 @@ private:
 };
 
 /**
- * The interrupt stack.
+ * @brief The interrupt stack.
  *
  * @details
  * When an interrupt occurs, these values are pushed onto the stack.
@@ -164,6 +168,7 @@ struct IntrStack {
 
     /* These values are automatically pushed by the CPU */
     /**
+     * @details
      * Some interrupts do not have an error code.
      * To simplify the code, we push a zero when those interrupts occur.
      */
@@ -190,7 +195,9 @@ bool IsIntrEnabled() noexcept;
 void InitIntr() noexcept;
 
 /**
- * The interrupt guard.
+ * @brief The interrupt guard.
+ *
+ * @details
  * It provides a convenient RAII-style mechanism for disabling interrupts for the duration of a scoped block.
  */
 class IntrGuard {
@@ -206,7 +213,9 @@ private:
 };
 
 /**
- * The default interrupt handler.
+ * @brief The default interrupt handler.
+ *
+ * @details
  * It prints interrupt information and pauses the system.
  */
 void DefaultIntrHandler(stl::size_t intr_num) noexcept;

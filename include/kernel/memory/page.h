@@ -1,5 +1,9 @@
 /**
- * Memory paging.
+ * @file page.h
+ * @brief Memory paging.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -36,7 +40,8 @@ constexpr stl::size_t CalcPageCount(const stl::size_t size) noexcept {
  * Memory paging is based on memory segmentation, it translates the linear address obtained from segmentation into a physical address.
  * In the page directory, each entry points to a page table.
  * In the page table, each entry points to a 4 KB physical page frame.
- * ```
+ *
+ * @code
  * -----------------------------------------------------------------------------------------
  *      31-12    11-9   8   7   6   5    4     3     2    1   0
  * ┌────────────┬─────┬───┬───┬───┬───┬─────┬─────┬─────┬───┬───┐
@@ -50,10 +55,11 @@ constexpr stl::size_t CalcPageCount(const stl::size_t size) noexcept {
  *                      │       │   └─ 1: The page has been accessed.
  *                      │       └─ 1: The page is dirty (modified).
  *                      └─ 1: The page is global.
- * ```
+ * @endcode
  *
  * In @p src/boot/loader.asm, the page directory table is initialized as follows:
- * ```
+ *
+ * @code
  *     ┌─────────────────────────┐
  *     │           ...           │
  *     ├─────────────────────────┤
@@ -75,7 +81,7 @@ constexpr stl::size_t CalcPageCount(const stl::size_t size) noexcept {
  * │   ├─────────────────────────┤
  * └─► │         Kernel          │
  *     └─────────────────────────┘
- * ```
+ * @endcode
  */
 class PageEntry {
 public:
@@ -173,7 +179,7 @@ static_assert(sizeof(PageEntry) == sizeof(stl::uint32_t));
  * @brief The virtual address.
  *
  * @details
- * ```
+ * @code
  * -----------------------------------------------
  *  31-22 21-12   11-0
  * │ PDE │ PTE │ Offset |
@@ -182,7 +188,7 @@ static_assert(sizeof(PageEntry) == sizeof(stl::uint32_t));
  *    │     └─ The index of the page table entry.
  *    └─ The index of the page directory entry.
  * -----------------------------------------------
- * ```
+ * @endcode
  */
 class VrAddr {
 public:

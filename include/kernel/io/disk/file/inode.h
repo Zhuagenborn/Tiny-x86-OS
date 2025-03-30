@@ -1,5 +1,9 @@
 /**
- * The index node.
+ * @file inode.h
+ * @brief The index node.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -20,7 +24,8 @@ namespace io::fs {
  * In our system, an index node has 12 direct blocks and a single indirect block table.
  * The size of a single indirect block table is one sector, so it can save 128 block addresses.
  * Totally, an index node has up to 140 blocks for data storage.
- * ```
+ *
+ * @code
  *                      Index Node
  * ┌────────────┬───────────────┬───────────────────────┐
  * │ Attributes │ Direct Blocks │ Single Indirect Block │
@@ -36,7 +41,7 @@ namespace io::fs {
  *                                  ┌───────┐ ┌───────┐
  *                                  │ Block │ │ Block │
  *                                  └───────┘ └───────┘
- * ```
+ * @endcode
  *
  * Index nodes do not indicate their data type.
  * Instead, we use directory entries @p DirEntry to determine whether an item is a file or a directory.
@@ -81,7 +86,9 @@ struct IdxNode {
     stl::size_t idx {npos};
 
     /**
-     * The data size.
+     * @brief The data size.
+     *
+     * @details
      * - If the index node refers to a file, it is the size of the file.
      * - If the index node refers to a directory, it is the total size of all entries in the directory.
      */
@@ -98,7 +105,9 @@ private:
     stl::array<stl::size_t, direct_block_count> direct_lbas_;
 
     /**
-     * The LBA of the single indirect block table.
+     * @brief The LBA of the single indirect block table.
+     *
+     * @details
      * Each entry in the single indirect block table is a block's LBA.
      */
     stl::size_t indirect_tab_lba_;

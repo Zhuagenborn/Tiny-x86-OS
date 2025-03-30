@@ -1,5 +1,9 @@
 /**
- * The block queue.
+ * @file block_queue.h
+ * @brief The block queue.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -45,7 +49,9 @@ public:
     }
 
     /**
-     * Push an object into the queue.
+     * @brief Push an object into the queue.
+     *
+     * @details
      * If the queue is full, the current thread will be blocked.
      * When another consumer thread pops elements, the blocked thread will be resumed.
      */
@@ -69,7 +75,9 @@ public:
     }
 
     /**
-     * Push an object into the queue.
+     * @brief Push an object into the queue.
+     *
+     * @details
      * If the queue is empty, the current thread will be blocked.
      * When another producer thread pushes elements, the blocked thread will be resumed.
      */

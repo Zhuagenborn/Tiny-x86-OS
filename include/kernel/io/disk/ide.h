@@ -1,5 +1,9 @@
 /**
- * The IDE channel.
+ * @file ide.h
+ * @brief The IDE channel.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -10,9 +14,7 @@
 
 namespace io {
 
-/**
- * The IDE channel.
- */
+//! The IDE channel.
 class IdeChnl {
 public:
     //! A machine usually has two channels: primary and secondary channels.
@@ -123,7 +125,10 @@ private:
     Disks disks_;
 
     /**
+     * @brief
      * Whether the channel is waiting for an interrupt.
+     *
+     * @details
      * If an operation is submitted to the disk, we need to wait for an interrupt.
      */
     mutable bool waiting_intr_ {false};

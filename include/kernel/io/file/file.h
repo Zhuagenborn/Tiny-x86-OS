@@ -1,5 +1,9 @@
 /**
- * File management.
+ * @file file.h
+ * @brief File management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -10,9 +14,7 @@
 
 namespace io {
 
-/**
- * The file descriptor.
- */
+//! The file descriptor.
 class FileDesc {
 public:
     constexpr FileDesc(const stl::size_t desc = npos) noexcept : desc_ {desc} {}
@@ -36,9 +38,7 @@ private:
     stl::size_t desc_;
 };
 
-/**
- * The wrapper for file functions of @p Disk::FilePart.
- */
+//! The wrapper for file functions of @p Disk::FilePart.
 class File {
 public:
     enum class OpenMode { ReadOnly = 0, WriteOnly = 1, ReadWrite = 2, CreateNew = 4 };

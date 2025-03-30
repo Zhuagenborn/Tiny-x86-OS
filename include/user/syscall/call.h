@@ -1,5 +1,9 @@
 /**
- * User-mode system calls.
+ * @file call.h
+ * @brief User-mode system calls.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -9,7 +13,7 @@
 namespace usr::sc {
 
 /**
- * Types of system calls.
+ * @brief Types of system calls.
  *
  * @warning
  * Their order must be the same as @p sc::SysCallType.
@@ -32,6 +36,7 @@ enum class SysCallType {
 };
 
 extern "C" {
+
 /**
  * @brief Call a kernel method by a system call in user mode.
  *

@@ -1,5 +1,9 @@
 /**
- * User-mode file management.
+ * @file file.h
+ * @brief User-mode file management.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
@@ -8,6 +12,7 @@
 
 namespace usr::io {
 
+//! User-mode file management.
 class File {
 public:
     File() = delete;

@@ -1,5 +1,9 @@
 /**
- * String formatting.
+ * @file format.h
+ * @brief String formatting.
+ *
+ * @par GitHub
+ * https://github.com/Zhuagenborn
  */
 
 #pragma once
